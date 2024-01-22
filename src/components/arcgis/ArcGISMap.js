@@ -7,6 +7,9 @@ import MapView from '@arcgis/core/views/MapView';
 import esriConfig from '@arcgis/core/config.js';
 import FeatureLayer from "@arcgis/core/layers/FeatureLayer.js";
 import ScaleBar from "@arcgis/core/widgets/ScaleBar.js";
+import Legend from "@arcgis/core/widgets/Legend.js";
+
+
 
 // import our popup component and the popup wrapper
 import Popup from '../Popup';
@@ -51,7 +54,7 @@ const ArcGISMap = () => {
         container: mapContainerRef.current, //attach view to our reference element
         map: webmap,
         center: [-63.582687, 44.651070],
-        zoom: 12,
+        zoom: 6,
         popup: {
           actions: [], // no actions
           dockEnabled: false, // attach popup to clicked feature by default
@@ -100,6 +103,11 @@ const ArcGISMap = () => {
       view.ui.add(scaleBar, {
         position: "bottom-right",
       });
+      let legend = new Legend({
+        view: view
+      });
+      
+      view.ui.add(legend, "top-right");
 
       /**
        * @param object attributes

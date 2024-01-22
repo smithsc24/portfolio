@@ -8,7 +8,7 @@ import esriConfig from '@arcgis/core/config.js';
 import FeatureLayer from "@arcgis/core/layers/FeatureLayer.js";
 import ScaleBar from "@arcgis/core/widgets/ScaleBar.js";
 import Legend from "@arcgis/core/widgets/Legend.js";
-
+import Search from "@arcgis/core/widgets/Search.js";
 
 
 // import our popup component and the popup wrapper
@@ -85,6 +85,7 @@ const ArcGISMap = () => {
               // We have Attrutes? Let's populate our popup
               if (attributes) {
                 // Opens the popup and tells it where toopen
+                console.log(attributes)
                 view.openPopup({
                   title: attributes.Facility, //Set the popup Title
                   location: evt.mapPoint,
@@ -96,18 +97,40 @@ const ArcGISMap = () => {
           });
         });
       });
-      // Add a simpole scalebar
+
+      // Add a simple scalebar
       let scaleBar = new ScaleBar ({
         view : view
-      });
-      view.ui.add(scaleBar, {
-        position: "bottom-right",
       });
       let legend = new Legend({
         view: view
       });
       
+      //restrict our search to facilities in our layer
+      const sources = [{
+        layer: new FeatureLayer({
+          url: "https://geoappext.nrcan.gc.ca/arcgis/rest/services/NACEI/energy_infrastructure_of_north_america_en/MapServer/28",
+          outfields: ["*"]
+        }),
+        exactMatch: true,
+        placeholder: "facility name",
+        searchFields: ["Facility", "PrimSource"],
+      }]
+      const searchWidget = new Search({
+        view: view,
+        sources: sources,
+        activeSourceIndex: 1, // This makes sure our layer is the default search source, not the global service
+        maxSuggestions: 10
+      });
+
+      view.ui.add(scaleBar, {
+        position: "bottom-right",
+      });
       view.ui.add(legend, "top-right");
+
+      view.ui.add(searchWidget, {
+        position: "top-left"
+      });
 
       /**
        * @param object attributes

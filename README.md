@@ -1,6 +1,8 @@
 # Readme
 
+
 ## About
+
 The purpose of this repository is to serve as a home for any small applications that I build during my time at NSCC-COGS, or any other small apoplications that I feel would serve well as portfolio pieces.
 Currently it only serves as home for a single application, but the end goal should look something like the following:
 
@@ -31,3 +33,21 @@ Since this is built using React, you will need to have node.js and npm installed
 ## Updates
 
 I do not know how frequently I will update this repository, but I will add updates to this readme, and slowly build out a wiki as I do
+
+### CRTY1033 Webmap 1
+
+The purpose of this web map is to allow users to explore the energy infrastructure of North America, viewing the various types of production facilities that are available.
+
+The chosen feature layer is the Energy Infrastructure of North America from ArcGIS Online, provided by the user MCE_Curated. It contains points that depict the locations of Energy Infrastructure in the United States, Mexico and Canada.
+
+#### Author
+Samuel Smith
+
+#### Submission Date
+January 22nd, 2024
+
+#### Data Sources
+
+MCE_Curated. (2020, August 14). Energy Infrastructure of North America. ArcGIS Online. https://m.arcgis.com/home/item.html?id=7d955457e1774262a1d4ba4f748b5188 
+
+

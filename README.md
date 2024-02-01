@@ -46,6 +46,14 @@ Samuel Smith
 #### Submission Date
 January 22nd, 2024
 
+#### DOM Manipulation
+
+For this application DOM manipulation adds to the user experience by giving them basic interactive elements like a search bar and a popup. This allows the user to look for a power facility by name if they happen to know it and the popups give some additional (although limited) information about each facility, instead of the facility just being a marker on the map. Updating the text of the scale bar at different zoom levels is an incredibly simple text manipulation, but it allows the user to estimate distances accurately regardless of how far in (or out) they zoom.
+
+There is still room for improvement however. By adding some simple interaction such as the ability to expand or collapse the legend, users can hide it when looking at a large group of facility markers. Similarly, the search bar could be moved to a collapsible sidebar and have additional options such as filtering for specific types of facility (hydro for example). While this may not seem like a lot, having an overly cluttered UI can be quite jarring and the more elements you add to a page, the more important it becomes that you are able to show/hide them with a simple toggle.
+
+I don't have any sources for the above regarding DOM Manipulation as these notes are based on my own experiences in web development.
+
 #### Data Sources
 
 MCE_Curated. (2020, August 14). Energy Infrastructure of North America. ArcGIS Online. https://m.arcgis.com/home/item.html?id=7d955457e1774262a1d4ba4f748b5188 

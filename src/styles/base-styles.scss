@@ -1,0 +1,30 @@
+/**
+  This is where I'm going to add any global styles for this application.
+  Might add some library like semantic or tailwind at some point instead
+  of doing all the styles from scratch
+**/
+
+* {
+  box-sizing: border-box;
+ }
+
+ html,
+ body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  /* Keep our fonts simple */
+  font-family: 'Open Sans', sans-serif;
+
+ }
+ /* I don't want a fixed margin on my headings for now, I can add them later */
+ h1, h2, h3, h4, h5, h6 {
+  margin: auto;
+ }
+ /* let's pad header 3 */
+ h3 {
+  padding: 1rem;
+ }
+.bordered {
+  border: 1px solid black;
+}

@@ -1,0 +1,57 @@
+/**
+ * Author: Samuel Smith
+ * Course: CRTY 1033
+ * Instructor: Jill Ejdrygiewicz
+ * Due Date: February 6th, 2024
+
+ * My styles for the map page
+ */
+@use '../utilities/media-queries.scss' as *;
+
+.sweden-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #34a926;
+  @include lt-md {
+    flex-direction: column;
+  }
+  .sweden-sidebar {
+    align-self: center;
+    justify-content: center;
+    margin-left: 16px;
+    flex-basis: 50%;
+    .sidebar-content {
+      align-self: center;
+      padding-right: 12px;
+      p {
+        text-wrap: wrap;
+      }
+      h6 {
+        margin:0;
+      }
+      .flower-info {
+        display: flex;
+        flex-direction: column;
+        .flower {
+          max-width: 50%;
+        }
+      }
+    }
+    @include xs {
+      margin-bottom: 4px;
+    }
+  }
+  .sweden-map {
+    flex-basis: 50%;
+    height: 100%;
+    justify-content: center;
+    img {
+      max-height:100%;
+    }
+    .g-aiPointText {
+      cursor: pointer;
+    }
+  }
+
+}

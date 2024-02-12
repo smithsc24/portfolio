@@ -3,6 +3,8 @@
 // ArcGIS variables
 export const arcgisStyles = "https://js.arcgis.com/4.28/@arcgis/core/assets/esri/themes/light/main.css";
 
+export const mapboxKey = "pk.eyJ1Ijoic21pdGhzYzIiLCJhIjoiY2xzamdvZGZxMXFsdjJ2cXAzMHFnM3JldSJ9.IrXxuVd9EvNgELYGONfsWA"
+
 export const provinceLabels = [
   'Lappland', 'Norrbotten', 'Västerbotten', 'Ångermanland', 'Jämtland', 'Medelpad', 'Härjedalen', 
   'Hälsingland', 'Dalarna', 'Gästrikland', 'Uppland', 'Västmanland', 'Värmland', 'Dalsland', 'Närke', 

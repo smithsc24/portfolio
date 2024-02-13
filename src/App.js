@@ -5,14 +5,16 @@ import Footer from "./elements/Footer";
 
 import ArcGISMap from "./components/arcgis/ArcGISMap";
 import SwedenMap from "./components/SwedenMap";
+import MapBox from "./components/mapbox/MapBox";
+import { MapboxProvider } from "./providers/MapboxProvider";
 
 //<ArcGISMap />
 function App() {
   return (
     <div className="App">
-      <Header/>
-      <SwedenMap/>
-      <Footer/>      
+      <MapboxProvider>
+        <MapBox />   
+      </MapboxProvider>
     </div>
   );
 }

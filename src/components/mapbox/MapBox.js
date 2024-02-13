@@ -17,6 +17,7 @@ mapboxgl.accessToken = mapboxKey;
 
 const MapBox = () => {
   const [popupContent, setPopupContent] = useState(null)
+  const [popupLayer, setPopupLayer] = useState('')
   const [popupCoords, setPopupCoords] = useState(null)
   const { map, setMap } = useContext(mapContext);
   const mapContainer = useRef(null)
@@ -54,15 +55,11 @@ const MapBox = () => {
       });
       // do stuff if there's something there
       if (features.length > 0) {
-        // grab the data from the selected feature 
-        const properties = features[0].properties
-        const layer = features[0].layer.id
+        // grab the data from the selected feature  
+        setPopupLayer(features[0].layer.id)
         setPopupCoords(evt.lngLat)
-        setPopupContent(properties)
-        return <PopupContent
-          feature={properties}
-          layer={layer}
-          />
+        setPopupContent(features[0].properties)
+        return 
       }
     });
   }
@@ -74,7 +71,10 @@ const MapBox = () => {
       {
         popupCoords && (
           <Popup coords={popupCoords} onClose={onPopupClose}>
-            {popupContent}
+            <PopupContent
+              feature={popupContent}
+              layer={popupLayer}
+          />
           </Popup>
         )
       }

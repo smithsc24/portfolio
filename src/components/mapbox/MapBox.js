@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
-import ReactDOM from "react-dom";
 //this looks silly, but it breaks stuff if I write it without that comment. Basically need to tell webpack to ignmore mapbox
 import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
 
@@ -23,8 +22,9 @@ const MapBox = () => {
   const mapContainer = useRef(null)
 
   function onPopupClose() {
-    setPopupContent(null)
+    setPopupContent([])
     setPopupCoords(null)
+
   }
 
   useEffect(()=>{
@@ -44,23 +44,21 @@ const MapBox = () => {
       map.resize();
     })
     // Event handler to determine if one of our icon layers was clicked
-     map.on('click', evt => {
-      // Check the location clicked to see if it contains features from one of three layers
-      const features = map.queryRenderedFeatures(evt.point, {
-        layers: [
-          "metalworksenglish-3cajz2",
-           "oilandgasenglish-17d4ye",
-          "producingminesenglish-39ikgc"
-        ]
-      });
-      // do stuff if there's something there
-      if (features.length > 0) {
-        // grab the data from the selected feature  
-        setPopupLayer(features[0].layer.id)
-        setPopupCoords(evt.lngLat)
-        setPopupContent(features[0].properties)
-        return 
-      }
+     map.on('click', [
+      "metalworksenglish-3cajz2",
+       "oilandgasenglish-17d4ye",
+      "producingminesenglish-39ikgc"
+    ],  evt => {
+      // Grab the features from the layer and generate a popup
+      const popup = evt.features.map((elem) => {
+        return (<PopupContent
+          key={elem.properties.OBJECTID}
+          feature={elem.properties}
+          layer={elem.layer.id}
+        />
+    )});
+      setPopupContent(popup)
+      setPopupCoords(evt.lngLat)
     });
   }
   if (!map) initialiazeMap({setMap, mapContainer})
@@ -70,11 +68,9 @@ const MapBox = () => {
     <div>
       {
         popupCoords && (
-          <Popup coords={popupCoords} onClose={onPopupClose}>
-            <PopupContent
-              feature={popupContent}
-              layer={popupLayer}
-          />
+          <Popup
+            coords={popupCoords} onClose={onPopupClose}>
+            {popupContent}
           </Popup>
         )
       }

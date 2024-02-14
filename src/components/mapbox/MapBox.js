@@ -38,10 +38,12 @@ const MapBox = () => {
     })
     // Add a scale control to the map
     map.addControl(new mapboxgl.ScaleControl());
+    // Add zoom and rotation controls to the map.
+    map.addControl(new mapboxgl.NavigationControl());
     
     // Set the map in our provider so we can access it from other map related components
     map.on('load', () => {
-      setMap(map)
+      setMap(map);
 
       map.resize();
     })

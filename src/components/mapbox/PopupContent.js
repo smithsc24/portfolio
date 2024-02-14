@@ -8,7 +8,7 @@ export default function PopupContent({ feature, layer }) {
     <div className="contents">
         {
           //Determine what we are using for a header
-          isOil ? <h3>{feature.MINESITE_E}</h3> : <h3>{feature.COMMODIT_E}</h3>
+          isOil ? <h3>{feature.MINESITE_E}</h3> : <h3>{feature.COM_GROU_E}</h3>
         }
           <div className="table">
           </div>

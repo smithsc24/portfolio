@@ -40,6 +40,9 @@ const MapBox = () => {
     map.addControl(new mapboxgl.ScaleControl());
     // Add zoom and rotation controls to the map.
     map.addControl(new mapboxgl.NavigationControl());
+    // Add fullscreen control
+    map.addControl(new mapboxgl.FullscreenControl());
+
     
     // Set the map in our provider so we can access it from other map related components
     map.on('load', () => {

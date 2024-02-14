@@ -36,6 +36,8 @@ const MapBox = () => {
       center:[ -101.99725069488107, 55.516969977158666],
       zoom: 4,
     })
+    // Add a scale control to the map
+    map.addControl(new mapboxgl.ScaleControl());
     
     // Set the map in our provider so we can access it from other map related components
     map.on('load', () => {
@@ -58,7 +60,6 @@ const MapBox = () => {
         />
     )});
       setPopupContent(popup)
-      setPopupCoords(evt.lngLat)
     });
   }
   if (!map) initialiazeMap({setMap, mapContainer})

@@ -60,6 +60,7 @@ const MapBox = () => {
         />
     )});
       setPopupContent(popup)
+      setPopupCoords(evt.lngLat)
     });
   }
   if (!map) initialiazeMap({setMap, mapContainer})

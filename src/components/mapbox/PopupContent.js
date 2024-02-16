@@ -17,7 +17,6 @@ export default function PopupContent({ feature, layer }) {
           <div className="table">
     
               {Object.entries(feature).map(([key, value], index) => {
-                console.log(key, value)
                 return(
                   <div className="row" key={index}>
                     <div className="cell">{miningFriendlyNames[key]}</div>

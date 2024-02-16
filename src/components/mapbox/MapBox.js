@@ -47,7 +47,6 @@ const MapBox = () => {
     // Set the map in our provider so we can access it from other map related components
     map.on('load', () => {
       setMap(map);
-
       map.resize();
     })
     // Event handler to determine if one of our icon layers was clicked

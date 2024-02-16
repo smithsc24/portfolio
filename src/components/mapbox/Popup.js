@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useRef } from "react";
 import mapboxgl from "mapbox-gl";
 
 import { mapContext } from "../../providers/MapboxProvider";
+import '../../styles/components/popup.scss';
+
 
 export const Popup = ( {children, coords, onClose} ) => {
   const { map } = useContext(mapContext)

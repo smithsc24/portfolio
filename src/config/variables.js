@@ -189,3 +189,20 @@ export const provinceFlowers = {
     attr: `<a href="http://www.gnu.org/copyleft/fdl.html" title="GNU Free Documentation License">GFDL</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=594058">Link</a>`
    },
 }
+
+export const miningFriendlyNames = {
+  "CITY_E": 'City',
+  "COMMODIT_E": 'Commodity',
+  "COM_DESC_E": 'Description',
+  "COM_GROU_E": 'Group',
+  "FAC_DESC_E": 'Facility Description',
+  "FAC_TYPE_E": 'Facility Type',
+  "LATITUDE": 'Latitude',
+  "LONGITUDE": 'Longitude',
+  "OBJECTID": 'Object ID',
+  "OWNER_E": 'Owner',
+  "OPERATIO_E": 'Operation',
+  "PROVINCE_E": 'Province',
+  "MINESITE_E": 'Minesite',
+  "PRODUCT_E": 'Product'
+}

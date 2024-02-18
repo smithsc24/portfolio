@@ -12,9 +12,11 @@ import { MapboxProvider } from "./providers/MapboxProvider";
 function App() {
   return (
     <div className="App">
+      <Header/>
       <MapboxProvider>
         <MapBox />   
       </MapboxProvider>
+      <Footer />
     </div>
   );
 }

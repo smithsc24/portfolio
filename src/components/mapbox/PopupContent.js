@@ -1,3 +1,11 @@
+/**
+ * Author: Samuel Smith
+ * Course: CRTY 1033
+ * Instructor: Jill Ejdrygiewicz
+ * Due Date: February 23rd, 2024
+ * 
+ * A component for holding popup content
+ */
 import React, { useContext } from "react";
 import { mapContext } from "../../providers/MapboxProvider";
 
@@ -6,6 +14,7 @@ import '../../styles/components/popup-content.scss';
 import { miningFriendlyNames } from "../../config/variables";
 
 export default function PopupContent({ feature, layer }) {
+  // The oil and Gas Layer uses a minesite name, so we just want to see if the selected feature was on the oil
   const isOil = layer === "oilandgasenglish-17d4ye"
 
   return (
@@ -16,15 +25,17 @@ export default function PopupContent({ feature, layer }) {
         }
           <div className="table">
     
-              {Object.entries(feature).map(([key, value], index) => {
-                return(
-                  <div className="row" key={index}>
-                    <div className="cell">{miningFriendlyNames[key]}</div>
-                    <div className="cell">{value}</div>
-                  </div>
-                )
+              {
+                // Since not all features have the same data and we are using a generic popup
+                // This will iterate over the feature provided and generate a table to display the content
+                Object.entries(feature).map(([key, value], index) => {
+                  return(
+                    <div className="row" key={index}>
+                      <div className="cell">{miningFriendlyNames[key]}</div>
+                      <div className="cell">{value}</div>
+                    </div>
+                  )
               })}
-
           </div>
         </div>
   );

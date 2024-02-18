@@ -1,3 +1,12 @@
+/**
+ * Author: Samuel Smith
+ * Course: CRTY 1033
+ * Instructor: Jill Ejdrygiewicz
+ * Due Date: February 23rd, 2024
+ * 
+ * The mapbox brains
+ */
+
 import React, { useContext, useEffect, useRef, useState } from "react";
 //this looks silly, but it breaks stuff if I write it without that comment. Basically need to tell webpack to ignmore mapbox
 import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
@@ -7,8 +16,8 @@ import '@mapbox-controls/ruler/src/index.css';
 
 import 'mapbox-gl/dist/mapbox-gl.css';
 import '../../styles/components/mapbox.scss';
-import { mapboxKey } from "../../config/variables";
 
+import { mapboxKey } from "../../config/variables";
 import { mapContext } from "../../providers/MapboxProvider";
 import Popup from "./Popup";
 import PopupContent from "./PopupContent";
@@ -17,20 +26,22 @@ import PopupContent from "./PopupContent";
 mapboxgl.accessToken = mapboxKey;
 
 const MapBox = () => {
+  // Set up our local state
   const [popupContent, setPopupContent] = useState(null)
   const [popupCoords, setPopupCoords] = useState(null)
+  // Grab the map state functions from the context
   const { map, setMap } = useContext(mapContext);
   const mapContainer = useRef(null)
 
+  // Clear popup state when popup is closed
   function onPopupClose() {
     setPopupContent([])
     setPopupCoords(null)
-
   }
 
   useEffect(()=>{
-
-    const initialiazeMap = ({setMap, mapContainer}) => {
+    // Initialize the map itself
+    const initializeMap = ({setMap, mapContainer}) => {
       const map = new mapboxgl.Map({
       container: mapContainer.current,
       style: 'mapbox://styles/smithsc2/clsiym2yg03jn01o8cqkc8bos',
@@ -71,6 +82,7 @@ const MapBox = () => {
     ],  evt => {
       // Grab the features from the layer and generate a popup
       const popup = evt.features.map((elem) => {
+        // populate the PopupCOntent component
         return (<PopupContent
           key={elem.properties.OBJECTID}
           feature={elem.properties}
@@ -81,11 +93,12 @@ const MapBox = () => {
       setPopupCoords(evt.lngLat)
     });
   }
-  if (!map) initialiazeMap({setMap, mapContainer})
+  // If the map doesn't already exist, initialize it
+  if (!map) initializeMap({setMap, mapContainer})
   },[map, setMap])
  
   return (
-    <div>
+    <div className='map'>
       {
         popupCoords && (
           <Popup

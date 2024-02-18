@@ -1,3 +1,11 @@
+/**
+ * Author: Samuel Smith
+ * Course: CRTY 1033
+ * Instructor: Jill Ejdrygiewicz
+ * Due Date: February 23rd, 2024
+ * 
+ * Popup wrapper component
+ */
 import React, { useContext, useEffect, useRef } from "react";
 import mapboxgl from "mapbox-gl";
 
@@ -10,6 +18,7 @@ export const Popup = ( {children, coords, onClose} ) => {
   const popupRef = useRef();
 
   useEffect(() => {
+    // Initialize the popup and add it to the map
     const popup = new mapboxgl.Popup({})
       .setLngLat(coords)
       .setDOMContent(popupRef.current)

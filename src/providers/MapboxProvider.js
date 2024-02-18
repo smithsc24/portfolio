@@ -1,3 +1,12 @@
+/**
+ * Author: Samuel Smith
+ * Course: CRTY 1033
+ * Instructor: Jill Ejdrygiewicz
+ * Due Date: February 23rd, 2024
+ * 
+ * Creates a context/provider that will allow any component that lives inside of it to access
+ * the mapbox map.
+ */
 import React, { createContext, useState } from "react";
 
 // This will let us manipulate the state of our map

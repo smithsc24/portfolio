@@ -11,8 +11,9 @@ import  '../styles/elements/header.scss';
 
 const Header = () => (
   <header className="header">
-    <h1>Provincial Flowers of Sweden</h1>
+    <h1>Mining Operations in Canda</h1>
     <h3>Created by Samuel Smith</h3>
+    <h4>Colours inspired by the game map for <a href="https://www.satisfactorygame.com">Satisfactory</a></h4>
   </header>
 );
 

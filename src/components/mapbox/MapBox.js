@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 //this looks silly, but it breaks stuff if I write it without that comment. Basically need to tell webpack to ignmore mapbox
 import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
+import { MapboxSearchBox, MapboxAddressMinimap } from '@mapbox/search-js-web';
 
 
 import 'mapbox-gl/dist/mapbox-gl.css';
@@ -16,7 +17,8 @@ mapboxgl.accessToken = mapboxKey;
 
 const MapBox = () => {
   const [popupContent, setPopupContent] = useState(null)
-  const [popupLayer, setPopupLayer] = useState('')
+  const [searchVal, setSearchVal] = useState('');
+  const [popupLayer, setPopupLayer] = useState('');
   const [popupCoords, setPopupCoords] = useState(null)
   const { map, setMap } = useContext(mapContext);
   const mapContainer = useRef(null)
@@ -36,12 +38,24 @@ const MapBox = () => {
       center:[ -101.99725069488107, 55.516969977158666],
       zoom: 4,
     })
+    // Initialize and Add a search box to the map
+    const searchBox = new MapboxSearchBox();
+    searchBox.accessToken = mapboxKey;
+    searchBox.options = {
+      language:'en',
+      country: 'CA',
+      types:'address, poi'
+    };
+    searchBox.marker = true;
+    searchBox.mapboxgl = mapboxgl;
+    map.addControl(searchBox);
     // Add a scale control to the map
     map.addControl(new mapboxgl.ScaleControl());
     // Add zoom and rotation controls to the map.
     map.addControl(new mapboxgl.NavigationControl());
     // Add fullscreen control
     map.addControl(new mapboxgl.FullscreenControl());
+    //Initialize search box
 
     
     // Set the map in our provider so we can access it from other map related components

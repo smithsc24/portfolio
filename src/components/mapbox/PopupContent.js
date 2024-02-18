@@ -6,8 +6,7 @@
  * 
  * A component for holding popup content
  */
-import React, { useContext } from "react";
-import { mapContext } from "../../providers/MapboxProvider";
+import React from "react";
 
 import '../../styles/components/popup-content.scss';
 

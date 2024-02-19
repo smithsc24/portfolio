@@ -9,6 +9,7 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
     "less": "^4.2.0",
     "mapbox-gl": "^3.1.2",
     "mapbox-gl-compare": "^0.4.1",
@@ -22,7 +23,7 @@
     "webpack-dev-server": "^4.15.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "DISABLE_ESLINT_PLUGIN=true react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

@@ -32,7 +32,12 @@ Since this is built using React, you will need to have node.js and npm installed
 
 ## Updates
 
-I do not know how frequently I will update this repository, but I will add updates to this readme, and slowly build out a wiki as I do
+I do not know how frequently I will update this repository, but I will add updates to this readme, and slowly build out a wiki as I do.
+This repository currently has three projects living inside the application, but no means of switching between them. Navigation to seamlessly switch between each of the three projects: ArcGIS JS API, ai2html and Mapboxjs is a planned change when current assignments let up.
+
+
+## Project Notes
+
 
 ### CRTY1033 Webmap 1
 

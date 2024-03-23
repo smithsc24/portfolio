@@ -3,7 +3,7 @@
 
 ## About
 
-The purpose of this repository is to serve as a home for any small applications that I build during my time at NSCC-COGS, or any other small apoplications that I feel would serve well as portfolio pieces.
+The purpose of this repository is to serve as a home for any small applications that I build during my time at NSCC-COGS, or any other small applications that I feel would serve well as portfolio pieces.
 Currently it only serves as home for a single application, but the end goal should look something like the following:
 
 - A home page with a brief about me

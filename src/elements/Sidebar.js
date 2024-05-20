@@ -18,9 +18,9 @@ const Sidebar = () => {
             </Route>
             <Route path="/Maps">
               <Route index={true} element={<Maps/>}></Route>
-              <Route path=":arcgis" element={<ArcGISMap/>}></Route>
-              <Route path=":ai2html" element={<SwedenMap/>}></Route>
-              <Route path=":mapbox" element={<MapboxProvider><MapBox/></MapboxProvider>}></Route>
+              <Route path="arcgis" element={<ArcGISMap/>}></Route>
+              <Route path="ai2html" element={<SwedenMap/>}></Route>
+              <Route path="mapbox" element={<MapboxProvider><MapBox/></MapboxProvider>}></Route>
             </Route>
           </Routes>
         <div className="links">

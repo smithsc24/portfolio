@@ -5,9 +5,9 @@ import {Link} from "react-router-dom"
 const HomePage = () => {
   //This is here for now, make a sidebar with most of the links later
   return (
-    <div>
+    <div className="home-container">
       <h2>homepage placeholder</h2>
-      <Link to="/Maps">Go to Map Page</Link>
+      <h2>This is the Homepage</h2>
     </div>
   )
 }

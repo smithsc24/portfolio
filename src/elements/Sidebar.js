@@ -10,6 +10,7 @@ const Sidebar = () => {
       <div className="links">
         <Button path="/" label="Home" />
         <Button path="/Maps" label="Webmaps" />
+        <Button path="/Projects" label="Projects" />
       </div>
     </div>
   )

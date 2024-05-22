@@ -5,6 +5,7 @@ import SwedenMap from "./components/SwedenMap";
 import MapBox from "./components/mapbox/MapBox";
 import Maps from "./pages/Maps";
 import HomePage from "./pages/HomePage"
+import ProjectPage from "./pages/ProjectPage";
 
 import { MapboxProvider } from "./providers/MapboxProvider";
 
@@ -30,6 +31,7 @@ function App() {
             <Route path="ai2html" element={<SwedenMap/>}/>
             <Route path="mapbox" element={<MapboxProvider><MapBox/></MapboxProvider>}/>
           </Route>
+          <Route path="/Projects" element={<ProjectPage/>}></Route>
         </Routes>
     </div>
   );

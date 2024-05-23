@@ -1,0 +1,14 @@
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .ReactModal{
+    &__Content {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    width: fit-content;
+    height:fit-content;
+  }
+}
+}

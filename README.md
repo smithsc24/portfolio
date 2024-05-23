@@ -3,7 +3,7 @@
 
 ## About
 
-The purpose of this repository is to serve as a home for any small applications that I build during my time at NSCC-COGS, or any other small apoplications that I feel would serve well as portfolio pieces.
+The purpose of this repository is to serve as a home for any small applications that I build during my time at NSCC-COGS, or any other small applications that I feel would serve well as portfolio pieces.
 Currently it only serves as home for a single application, but the end goal should look something like the following:
 
 - A home page with a brief about me
@@ -32,7 +32,12 @@ Since this is built using React, you will need to have node.js and npm installed
 
 ## Updates
 
-I do not know how frequently I will update this repository, but I will add updates to this readme, and slowly build out a wiki as I do
+I do not know how frequently I will update this repository, but I will add updates to this readme, and slowly build out a wiki as I do.
+This repository currently has three projects living inside the application, but no means of switching between them. Navigation to seamlessly switch between each of the three projects: ArcGIS JS API, ai2html and Mapboxjs is a planned change when current assignments let up.
+
+
+## Project Notes
+
 
 ### CRTY1033 Webmap 1
 

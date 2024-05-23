@@ -7,11 +7,10 @@ import { projectList } from "../config/project-list.js"
 import "../styles/pages/project-page.scss";
 
 const ProjectPage = () => {
-  const projectItems = map(projectList, function(prj) {
-    console.log(prj)
-    return (
+  const projectItems = map(projectList, function(prj, idx) {    return (
       <Project
         project={prj}
+        key={idx}
       />
     )
   })

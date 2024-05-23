@@ -1,6 +1,4 @@
 import React from "react";
-import {Link} from "react-router-dom"
-
 
 const HomePage = () => {
   //This is here for now, make a sidebar with most of the links later

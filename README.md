@@ -1,23 +1,16 @@
 # Readme
 
-
 ## About
 
 The purpose of this repository is to serve as a home for any small applications that I build during my time at NSCC-COGS, or any other small applications that I feel would serve well as portfolio pieces.
 Currently it only serves as home for a single application, but the end goal should look something like the following:
 
 - A home page with a brief about me
-  - professional experience
-  - education
-  - hobbies
   - navigation to other pages
     - not sure if sidebar or header bar
 - Hobby showcase
   - aquariums, pens I have made et cetera
     - I know these aren't necessarily exciting, but they are a good way to showcase that I am a real person who does stuff other than just work.
-- Projects/Assignments
-  - This will be a sidebar with project names, and a main container
-  - Selecting a project name will trigger a render that loads the chosen project into the main container
 
 ## Running this yourself
 
@@ -29,35 +22,21 @@ Since this is built using React, you will need to have node.js and npm installed
 3. run `npm install`
 4. run `npm start`
 
-
 ## Updates
 
-I do not know how frequently I will update this repository, but I will add updates to this readme, and slowly build out a wiki as I do.
-This repository currently has three projects living inside the application, but no means of switching between them. Navigation to seamlessly switch between each of the three projects: ArcGIS JS API, ai2html and Mapboxjs is a planned change when current assignments let up.
-
-
-## Project Notes
-
-
-### CRTY1033 Webmap 1
-
-The purpose of this web map is to allow users to explore the energy infrastructure of North America, viewing the various types of production facilities that are available.
-
-The chosen feature layer is the Energy Infrastructure of North America from ArcGIS Online, provided by the user MCE_Curated. It contains points that depict the locations of Energy Infrastructure in the United States, Mexico and Canada.
-
-#### Author
-Samuel Smith
-
-#### Submission Date
-January 22nd, 2024
-
-#### DOM Manipulation
-
-For this application DOM manipulation adds to the user experience by giving them basic interactive elements like a search bar and a popup. This allows the user to look for a power facility by name if they happen to know it and the popups give some additional (although limited) information about each facility, instead of the facility just being a marker on the map. Updating the text of the scale bar at different zoom levels is an incredibly simple text manipulation, but it allows the user to estimate distances accurately regardless of how far in (or out) they zoom.
-
-There is still room for improvement however. By adding some simple interaction such as the ability to expand or collapse the legend, users can hide it when looking at a large group of facility markers. Similarly, the search bar could be moved to a collapsible sidebar and have additional options such as filtering for specific types of facility (hydro for example). While this may not seem like a lot, having an overly cluttered UI can be quite jarring and the more elements you add to a page, the more important it becomes that you are able to show/hide them with a simple toggle.
-
-I don't have any sources for the above regarding DOM Manipulation as these notes are based on my own experiences in web development.
+I will be periodically updating this portfolio as I have ideas, new photos or pages to add or functionality changes. For now, I have a few planned updates:
+- Setting a default map when looking at the maps page.
+  - Thhis should be working the way it is now, but it isn't. Not sure why
+- Add a hobbies page:
+  - Just some photos of my aquariums and pens I have made
+  - Goal is to show that I do other creative things in my free time
+  - This will be incredibly simple, just an image gallery
+  - Each image will have a very simple description
+- Data Retrieval:
+  - Right now the way I am getting my data to populate the projects page is less than ideal
+  - Plan is to change things up and use redux. While it probably isn't 100% necessary, it  would be good practice.
+- Style updates:
+  - This won't be anything that changes the appearance of elements, but rather moving commonly used items like colours to variables or utility classes.
 
 #### Data Sources
 

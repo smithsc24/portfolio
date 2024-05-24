@@ -9,8 +9,6 @@ import ProjectPage from "./pages/ProjectPage";
 
 import { MapboxProvider } from "./providers/MapboxProvider";
 
-import Header from "./elements/Header";
-import Footer from "./elements/Footer";
 import Sidebar from "./elements/Sidebar"
 
 
@@ -27,7 +25,7 @@ function App() {
               <Route index={true} element={<HomePage/>}/>
           </Route>
           <Route path="/Maps" element={<Maps/>}>
-            <Route path="arcgis" element={<ArcGISMap/>}/>
+            <Route index path="arcgis" element={<ArcGISMap/>}/>
             <Route path="ai2html" element={<SwedenMap/>}/>
             <Route path="mapbox" element={<MapboxProvider><MapBox/></MapboxProvider>}/>
           </Route>

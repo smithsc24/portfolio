@@ -1,10 +1,9 @@
 import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
-import ArcGISMap from "../components/arcgis/ArcGISMap";
-import SwedenMap from "../components/SwedenMap";
-import MapBox from "../components/mapbox/MapBox"
 import Button from '../elements/Button';
+import Footer from "../elements/Footer";
+
 
 
 import { MapboxProvider } from "../providers/MapboxProvider";
@@ -21,6 +20,7 @@ const Maps = () => {
       </div>
       <div className="map-view">
         <Outlet/>
+        <Footer />
       </div>
     </div>
   )

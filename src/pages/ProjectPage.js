@@ -2,6 +2,7 @@ import React from "react"
 import { forEach, map } from "lodash";
 
 import Project from "../components/Project"
+import PageTitle from "../elements/PageTitle.js";
 import { projectList } from "../config/project-list.js"
 
 import "../styles/pages/project-page.scss";
@@ -17,9 +18,7 @@ const ProjectPage = () => {
   
   return (
     <div className="projects-container">
-      <div className="title-block">
-        <h2 className="page-title"></h2>
-      </div>
+      <PageTitle title={"Projects"}/>
       <div className="project-list">
         {projectItems}
       </div>

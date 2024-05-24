@@ -14,12 +14,17 @@
   margin: 0;
   padding: 0;
   /* Keep our fonts simple */
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
 
+  font-weight: 400;
+  font-style: normal;
  }
- /* I don't want a fixed margin on my headings for now, I can add them later */
+
  h1, h2, h3, h4, h5, h6 {
-  margin: auto;
+  font-family: 'Lora', serif;
+
+  font-weight: 700;
+  font-style: normal;
  }
  /* let's pad header 3 */
  h3 {

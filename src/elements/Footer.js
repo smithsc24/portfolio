@@ -8,7 +8,7 @@
  */
 import React from "react";
 import  '../styles/elements/footer.scss';
-import cogsLogo from '../assets/logos/BlueGreen_Horizontal_transparent.png';
+import cogsLogo from '../assets/logos/COGS_White_2.png';
 
 const Footer = () => (
   <footer className="footer bordered">

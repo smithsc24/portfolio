@@ -1,21 +1,21 @@
 .btn {
-  vertical-align:middle;
+  line-height: 2.5rem;
   text-align: center;
+  vertical-align: middle;margin-bottom: 12px;
   a {
+    margin-top: auto;
+    margin-bottom: auto;
     display:inline-block;
-    color:#444;
+    color:#223053;
     cursor:pointer;
     width: 237px;
     height: 41px;
-    background: #B2E0F6 0% 0% no-repeat padding-box;
-    border: 1px solid #DEEDF2;
+    background: #B2E0F6;
+    border: 1px solid #000;
     opacity: 1;
     text-decoration: none;
-    background-color: #B2E0F6;
-    .active {
-      background-color: #709EB2;
+    &.active {
+      background: #709EB2;
     }
-  }
-  .link-btn {
   }
 }

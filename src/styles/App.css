@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   display: flex;
+  flex-grow: 1;
 }
 
 .App-logo {
@@ -36,4 +37,9 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+#root {
+  flex-grow: 1;
+  display: flex;
 }

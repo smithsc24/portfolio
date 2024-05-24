@@ -5,8 +5,12 @@
   border-radius: 24px;
   height: 319px;
   width: 781px;
-  align-self: center;
   margin:24px;
+  
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+    align-self: flex-end;
+  }
 
   .project-thumbnail {
     flex-basis: 50%;   

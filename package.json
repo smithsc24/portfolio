@@ -1,6 +1,7 @@
 {
   "name": "basic-portfolio-site",
   "version": "0.1.0",
+  "homepage": "https://smithsc24.github.io/portfolio",
   "private": true,
   "dependencies": {
     "@arcgis/core": "^4.28.10",

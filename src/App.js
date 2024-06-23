@@ -21,7 +21,7 @@ function App() {
        <Sidebar/>
        <Outlet/>   
        <Routes>
-          <Route path="/">
+          <Route path="/portfolio">
               <Route index={true} element={<HomePage/>}/>
           </Route>
           <Route path="/Maps" element={<Maps/>}>

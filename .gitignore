@@ -12,8 +12,6 @@ yarn-error.log*
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
-# Ignore build folder
-build/
 
 # Dependency directories
 node_modules/

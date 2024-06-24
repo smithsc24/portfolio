@@ -1,2 +1,0 @@
-/*! For license information please see 8165.4efd457c.chunk.js.LICENSE.txt */
-"use strict";(self.webpackChunkbasic_portfolio_site=self.webpackChunkbasic_portfolio_site||[]).push([[8165],{546:(e,s,t)=>{t.r(s),t.d(s,{CalciteAction:()=>o,defineCustomElement:()=>c});var i=t(6807);const o=i.A,c=i.d}}]);

@@ -8,7 +8,7 @@
  */
 
 import React, { useContext, useEffect, useRef, useState } from "react";
-//this looks silly, but it breaks stuff if I write it without that comment. Basically need to tell webpack to ignmore mapbox
+//this looks silly, but it breaks stuff if I write it without that comment. Basically need to tell webpack to ignore mapbox
 import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
 import { MapboxSearchBox } from '@mapbox/search-js-web';
 import RulerControl from '@mapbox-controls/ruler';
